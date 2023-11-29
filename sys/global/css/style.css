@@ -1,0 +1,66 @@
+.form-group.error .required, .form-group.error .form-control {border-color: #fd4c4c;}
+.form-control.error{border-color: #fd4c4c;}
+option.disabled {background: #dedede;}
+.mt-0{margin-top: 0;}
+.mt-1{margin-top: 1rem;}
+.mt-2{margin-top: 2rem;}
+.mb-0{margin-bottom: 0;}
+.mb-1{margin-bottom: 1rem;}
+.mb-2{margin-bottom: 2rem;}
+.ml-0{margin-left: 0;}
+.ml-1{margin-left: 1rem;}
+.ml-2{margin-left: 2rem;}
+.mr-0{margin-right: 0;}
+.mr-1{margin-right: 1rem;}
+.mr-2{margin-right: 2rem;}
+.pt-0{padding-top: 0;}
+.pt-1{padding-top: 1rem;}
+.pt-2{padding-top: 2rem;}
+.pb-0{padding-bottom: 0;}
+.pb-1{padding-bottom: 1rem;}
+.pb-2{padding-bottom: 2rem;}
+.pl-0{padding-left: 0;}
+.pl-1{padding-left: 1rem;}
+.pl-2{padding-left: 2rem;}
+.pr-0{padding-right: 0;}
+.pr-1{padding-right: 1rem;}
+.pr-2{padding-right: 2rem;}
+.colorWhite, .color-white{color:#fff !important;}
+.colorOrange {color:#fc5513}
+.colorOrange:hover {color:#2e94da}
+.green,.cgreen{color:#0B0 !important;}
+.yellow,.cyellow,.color-yellow {color: #f0ad4e;}
+.blue,.cblue,.color-blue {color: #337ab7;}
+.red,.cred,.color-red{color:#f00 !important;}
+.pink,.cpink {color: #E91E63 !important;}
+.gray,.cgray {color: #999 !important;}
+.teal {color: #009688 !important;}
+.deep-orange { color: #FF5722 !important;}
+.cyan {color: #2e94da !important;}
+.cblack {color: #333 !important;}
+.bgColor{background:#fff; color: #6f6f6f;}
+.bg-gray{background:#ccc;}
+.bg-blue{background-color: #337ab7; color: #fff;}
+.success {background-color: #04AA6D;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */
+.other {background-color: #e7e7e7; color: black;} /* Gray */
+#modal_mask.active {
+    visibility: visible;
+    opacity: 0.5;
+}
+#modal_mask {
+    position: fixed;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    top: 0 !important;
+    right: 0;
+    bottom: 0;
+    background-color: #363636;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}

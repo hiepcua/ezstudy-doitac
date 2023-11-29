@@ -1,0 +1,46 @@
+RewriteEngine On
+RewriteRule ^home/?$ 								index.php
+RewriteRule ^login/?$								index.php?com=user&task=login
+RewriteRule ^dashboard/?$ 							index.php?com=user&task=dashboard
+RewriteRule ^logout/?$ 	 							logout.php
+RewriteRule ^user_profile/?$ 						index.php?com=user&task=profile
+RewriteRule ^forgotpass/?$  						index.php?com=user&task=forgot
+RewriteRule ^changepass/?$  						index.php?com=user&task=changepass
+RewriteRule ^changetpass/?$  						index.php?com=user&task=changetpass
+
+# Config
+RewriteRule ^config/?$ 	index.php?com=config
+
+# User
+RewriteRule ^guser/?$ 								index.php?com=guser  [QSA]
+RewriteRule ^guser/add?$ 							index.php?com=guser&task=add
+RewriteRule ^guser/edit/([0-9]+)?$ 					index.php?com=guser&task=edit&id=$1
+RewriteRule ^guser/active/([0-9]+)?$ 				index.php?com=guser&task=active&id=$1
+RewriteRule ^guser/delete/([0-9]+)?$ 				index.php?com=guser&task=delete&id=$1
+
+# User
+RewriteRule ^user/?$ 								index.php?com=user  [QSA]
+
+RewriteRule ^user/add?$ 							index.php?com=user&task=add
+RewriteRule ^user/edit/([0-9]+)?$ 					index.php?com=user&task=profile&id=$1
+RewriteRule ^user/active/([0-9]+)?$ 				index.php?com=user&task=active&id=$1
+RewriteRule ^user/delete/([0-9]+)?$ 				index.php?com=user&task=delete&id=$1
+RewriteRule ^user/changepass/([0-9]+)?$ 			index.php?com=user&task=changepass&id=$1
+
+# Member
+RewriteRule ^report/?$ 								index.php?com=wallet&task=report  [QSA]
+RewriteRule ^history-wallet-b/?$ 					index.php?com=wallet&task=history_wallet_b  [QSA]
+RewriteRule ^history-nap/?$ 					    index.php?com=wallet&task=history_wallet_b&type=1  [QSA]
+RewriteRule ^history-chuyen/?$ 					    index.php?com=wallet&task=history_wallet_b&type=2  [QSA]
+RewriteRule ^history-kichhoat/?$ 					index.php?com=wallet&task=history_wallet_b&type=3  [QSA]
+RewriteRule ^history-wallet-s/?$ 					index.php?com=wallet&task=history_wallet_s  [QSA]
+RewriteRule ^member/?$ 								index.php?com=member  [QSA]
+RewriteRule ^member/add?$ 							index.php?com=member&task=add
+RewriteRule ^member/edit/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 		index.php?com=member&task=edit&id=$1
+RewriteRule ^member/wallet_b/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 		index.php?com=member&task=detail_wallet_b&id=$1
+RewriteRule ^member/wallet_s/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 		index.php?com=member&task=detail_wallet_e&id=$1
+RewriteRule ^member/active/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 		index.php?com=member&task=active&id=$1
+RewriteRule ^member/delete/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 		index.php?com=member&task=delete&id=$1
+
+RewriteRule ^sales/?$ 						        index.php?com=member&task=list&type=0  [QSA]
+RewriteRule ^sales/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 				        index.php?com=member&task=list&type=0&id=$1  [QSA]

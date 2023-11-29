@@ -1,0 +1,37 @@
+.box-action{position: fixed;right: 0px;width: 320px;top: 0px;bottom: 0px;z-index: 999;background-color: #eee;padding: 10px 15px;}
+.box-action .item-act{
+    background-color: #fff;
+    margin-bottom: 13px;
+    margin-top: 13px;
+    padding: 5px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.item-act .label{ font-size: 20px; font-weight: bold; color: #222}
+.ctrl.active{background-color: red !important;}
+.info-test{border-bottom: 1px solid #f1f1f1; position: relative;}
+.info-test .notic-answer{position: absolute; bottom: 0px; right:0px;}
+.notic-answer .color{width: 30px; height: 18px; float: left; margin-right: 6px}
+.notic-answer .red{background-color: red}
+.notic-answer .black{background-color: black}
+.item-question{min-height:320px;}
+.box-btn{text-align:right;}
+.container-fluid{padding: 0px 60px;}
+#main{margin-right: 320px}
+.box-action .item-act.active{background-color: #94e6bd;}
+.btn-rs{text-align: center; margin-top: 15px;}
+.box-rs{text-align:center}
+.box-rs h4{margin-bottom: 22px;}
+.box-countdown{
+	background-color: #4b98d4;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	/* font-weight: bold; */
+	padding: 15px;
+	margin:-15px -15px 0px -15px;
+}
+.box-rs h5{}
+.box-rs h1{margin-bottom: 25px;font-size: 36px;font-weight: bold;color:red;}
+.list-quiz .item-true{color: red;font-weight: bold;}
+.list-quiz .item-false{text-decoration: line-through;color: #888;}

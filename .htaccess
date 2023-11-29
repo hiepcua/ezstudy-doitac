@@ -1,0 +1,91 @@
+RewriteEngine On
+
+RewriteRule ^admin/?$ 							sys/index.php
+RewriteRule ^tooltracnghiem/?$ 						tooltracnghiem/ 
+#-------------------------------------------------------------------------------------------
+RewriteRule ^register/?$ 						index.php?com=members&viewtype=m-register  [QSA]
+RewriteRule ^r-success/?$ 						index.php?com=members&viewtype=m-regist-success  [QSA]
+RewriteRule ^login/?$ 							index.php?com=members&viewtype=m-login
+RewriteRule ^forgot-password/?$ 				index.php?com=members&viewtype=m-forgotpass
+RewriteRule ^forgot-2fa/?$ 						index.php?com=members&viewtype=m-forgot2fa
+
+RewriteRule ^members/?$ 						index.php?com=members&viewtype=list
+RewriteRule ^saler/?$ 							index.php?com=members&viewtype=list&type=1 [QSA]
+RewriteRule ^daily/?$ 							index.php?com=members&viewtype=list [QSA]
+RewriteRule ^members/push?$ 					index.php?com=members&viewtype=push
+RewriteRule ^members/addnew?$ 					index.php?com=members&viewtype=add
+RewriteRule ^members/changepass?$ 				index.php?com=members&viewtype=change_pass
+RewriteRule ^members/avatar?$ 					index.php?com=members&viewtype=avatar
+RewriteRule ^members/edit/([0-9a-zA-Z\-]+)?$ 	index.php?com=members&viewtype=edit&user=$1  [QSA]
+RewriteRule ^members/config/([0-9a-zA-Z\-]+)?$ 	index.php?com=members&viewtype=config_bonus&user=$1  [QSA]
+RewriteRule ^members/profile/?$	 				index.php?com=members&viewtype=profile
+RewriteRule ^members/bonus/?$	 				index.php?com=members&viewtype=bonus
+RewriteRule ^myteam/?$ 							index.php?com=members&viewtype=dashboard
+
+
+RewriteRule ^send/?$ 							index.php?com=wallet&viewtype=send
+RewriteRule ^receive/?$ 						index.php?com=wallet&viewtype=receive
+RewriteRule ^buy/?$ 							index.php?com=wallet&viewtype=buy
+RewriteRule ^payment/?$ 						index.php?com=wallet&viewtype=payment
+RewriteRule ^bonus-report/?$ 					index.php?com=wallet&viewtype=report
+RewriteRule ^bonus-report/([a-zA-Z0-9+&@#\/%?=~_|!:,.;]*[a-zA-Z0-9+&@#\/%=~_|])?$ 		index.php?com=wallet&viewtype=report&id=$1
+RewriteRule ^s-wallet/?$ 						index.php?com=wallet&viewtype=list-wallet&wallet=s [QSA]
+RewriteRule ^b-wallet/?$ 						index.php?com=wallet&viewtype=list-wallet&wallet=b [QSA]
+
+RewriteRule ^dashboard/?$ 						index.php?com=members&viewtype=dashboard
+
+
+
+RewriteRule ^account/?$ 						index.php?com=account&viewtype=list [QSA]
+RewriteRule ^account/hocsinh?$ 					index.php?com=account&viewtype=list_hocsinh [QSA]
+RewriteRule ^account/chame?$ 					index.php?com=account&viewtype=list_chame [QSA]
+RewriteRule ^account/addnew?$ 					index.php?com=account&viewtype=add [QSA]
+RewriteRule ^listMember/?$ 						api/listMember.php
+
+#------------------------------------------------------------------------------------------
+RewriteRule ^verifyAccount-(.*)/?$ 				ajaxs/mem/verifyAccount.php?user=$1
+RewriteRule ^verifyAccount/?$ 					ajaxs/mem/verifyAccount.php   [QSA]
+#-------------------------------------------------------------------------------------------
+RewriteRule ^api/member/regis?$					api/mem/process_register.php
+RewriteRule ^api/member/login?$					api/mem/process_login.php
+RewriteRule ^api/member/verifi?$				api/mem/verifyAccount.php   [QSA]
+RewriteRule ^api/member/change-pass?$			api/mem/process_changepass.php
+RewriteRule ^api/member/losepasss?$				api/mem/process_losepass.php
+RewriteRule ^api/member/lose2fa?$				api/mem/process_lose2fa.php
+
+RewriteRule ^api/paymentQR?$					api/pit/payment_qrcode.php
+RewriteRule ^api/paymentQRUrl?$					api/pit/get_url_qrpayment.php
+RewriteRule ^api/GetWallet?$					api/pit/getwallet.php
+RewriteRule ^api/PitBalance?$					api/pit/getBalance.php
+RewriteRule ^api/WalletBalance?$				api/wallet/getBalance.php
+RewriteRule ^api/PacketList?$					api/wallet/getPacketList.php
+RewriteRule ^api/updatePacket?$					api/wallet/updatePacket.php
+
+RewriteRule ^api/PitHistories?$					api/pit/getHistories.php
+RewriteRule ^api/WalletHistories?$				api/wallet/getHistories.php
+RewriteRule ^api/ChangePassword?$				api/mem/changepass.php
+RewriteRule ^api/UpdateInfo?$					api/mem/updateinfo.php
+RewriteRule ^api/Active2FA?$					api/mem/process_active_2fa.php
+RewriteRule ^api/confirm2fa?$					api/mem/confirm2fa.php
+RewriteRule ^api/GoogleAuthenUrl?$				api/mem/get_url_2fa.php
+RewriteRule ^api/KYC?$							api/mem/uploadKYC.php
+RewriteRule ^api/ActiveWallet?$					api/pit/createWallet.php
+RewriteRule ^api/Send?$							api/pit/tranfer.php
+RewriteRule ^api/Withdraw?$						api/pit/withdraw.php
+RewriteRule ^api/Tranfer?$						api/pit/tranfer_b.php
+RewriteRule ^api/SellPit?$						api/pit/sellPit.php
+RewriteRule ^api/SellRate?$						api/pit/sellRate.php
+RewriteRule ^api/SellPrice?$					api/pit/SellPrice.php
+
+RewriteRule ^api/getLinkInviteParent?$			api/mem/getLinkInviteParent.php
+RewriteRule ^api/UpdateInviteLink?$				api/mem/process_updateAffiliate.php
+
+RewriteRule ^api/getAffiliateLink?$				api/mem/getAffiliateLink.php
+RewriteRule ^api/getListWallet?$				api/pit/getListWallet.php
+
+
+#Bảo vệ file
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
